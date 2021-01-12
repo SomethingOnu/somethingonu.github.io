@@ -1,0 +1,256 @@
+:root {
+    --black: #0f0f0f;
+    --gray: #7f7f7f;
+    --white: #efefef;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+}
+html {
+    text-align: left;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    color: var(--white);
+}
+a {
+    color: var(--white);
+}
+img {
+    vertical-align: top;
+}
+main {
+    display: flex;
+    justify-content: center;
+    /* width: 100vw;
+    height: 100vh;
+    align-items: center; */
+}
+main > div {
+    margin: 16px 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+#container-L {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: auto;
+}
+#container-R {
+    width: 360px;
+    height: auto;
+}
+#profile-1,
+#profile-2,
+#profile-3,
+#notice,
+#profile-4 {
+    margin: 12px 6px;
+    padding: 12px 8px;
+    border: solid 1px var(--white);
+    border-radius: 4px;
+}
+
+#profile-1 {
+    display: flex;
+    height: auto;
+    margin-bottom: 6px;
+}
+#profile-1 > div {
+    margin: 4px 8px;
+    transition: 250ms;
+}
+#profile-1 > div > img {
+    width: 64px;
+    height: 64px;
+    border-radius: 2px;
+}
+#profile-1 > div > .name {
+    font-weight: 500;
+    font-size: 24px;
+}
+#profile-1 > div > .comment {
+    font-size: 12px;
+}
+
+#profile-2 {
+    height: 100%;
+    margin-top: 6px;
+}
+#profile-2 > table {
+    margin: 4px 8px;
+    transition: 250ms;
+}
+#profile-2 > table th {
+    text-align: center;
+    padding: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--black);
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 20%,
+        var(--gray) 20%,
+        var(--gray) 80%,
+        transparent 80%,
+        transparent 100%
+    );
+}
+#profile-2 > table td {
+    padding: 6px;
+}
+#profile-2 .triangle_right {
+    display: inline-block;
+    vertical-align: 0;
+    width: 0;
+    height: 0;
+    margin: 0 12px;
+    border-top: solid 6px transparent;
+    border-bottom: solid 6px transparent;
+    border-left: solid 6px var(--gray);
+}
+
+#profile-3 {
+    height: calc(100% - 50px);
+}
+#profile-3 > .link {
+    position: relative;
+    margin: 8px 4px;
+    padding: 4px;
+    border-radius: 2px;
+    transition: 250ms;
+}
+#profile-3 > .link:hover {
+    background-color: var(--gray);
+    transition: 250ms;
+}
+#profile-3 > .link a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#profile-3 > .category {
+    margin: 0 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray);
+    border-bottom: solid 1px var(--gray);
+}
+#profile-3 i {
+    text-align: center;
+    width: 48px;
+    height: 16px;
+}
+
+#notice {
+    width: 690px;
+    margin: 0 6px;
+    margin-bottom: 12px;
+}
+#notice > div {
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    padding: 4px 8px;
+    transition: 250ms;
+}
+#notice > div > .date {
+    font-weight: 500;
+    font-size: 14px;
+    padding-right: 8px;
+    border-right: double 6px var(--white);
+    color: var(--gray);
+}
+#notice > div > .news {
+    padding-left: 8px;
+}
+
+#profile-4 {
+    width: 690px;
+    margin: 0 6px;
+    margin-bottom: 12px;
+}
+#profile-4 > .work {
+    display: flex;
+    position: relative;
+    margin: 8px 4px;
+    padding: 4px;
+    border: solid 1px transparent;
+    border-radius: 2px;
+    transition: 250ms;
+}
+#profile-4 > .work:hover {
+    border: solid 1px var(--white);
+    transition: 250ms;
+}
+#profile-4 > .work a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#profile-4 > .work > div {
+    margin: 4px;
+}
+#profile-4 > .work > div > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+    filter: grayscale(100%);
+    transition: 250ms;
+}
+#profile-4 > .work:hover > div > img {
+    filter: grayscale(0%);
+    transition: 250ms;
+}
+#profile-4 > .work > div > .name {
+    font-size: 20px;
+    font-weight: 500;
+}
+#profile-4 > .work > div > .explanation {
+    font-size: 14px;
+    font-weight: 100;
+}
+#profile-4 > .work > .wip > .name,
+#profile-4 > .work > .wip > .explanation {
+    color: var(--gray);
+}
+#profile-4 > .category {
+    margin: 0 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray);
+    border-bottom: solid 1px var(--gray);
+}
+
+@media screen and (max-width: 720px) {
+    main {
+        align-items: start;
+    }
+    .flex-container,
+    #container-L {
+        display: inline;
+    }
+    #profile-1,
+    #profile-2 {
+        margin: 12px 6px;
+    }
+    #notice,
+    #profile-4 {
+        width: 330px;
+    }
+}
