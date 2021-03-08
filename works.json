@@ -5,6 +5,12 @@
     },
     {
         "type"        : "work",
+        "link"        : "https://blog.0nu.be/",
+        "name"        : "おぬ的な気まぐれブログ",
+        "explanation" : "おぬ氏が日記や備忘録を纏めるだけのページ"
+    },
+    {
+        "type"        : "work",
         "link"        : "https://somethingonu.github.io/PhotoGallery",
         "name"        : "おぬ的な写真回廊",
         "explanation" : "おぬ氏が撮影した写真を掲示したウェブサイト"
